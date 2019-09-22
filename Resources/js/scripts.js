@@ -24,6 +24,8 @@ $('document').ready(function(){
     
 });
 
+/* Anchors */
+
 $(function() {
     $('a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -35,4 +37,49 @@ $(function() {
             }
         }
     });
+});
+
+/* animations */
+$('.js--wp-1').waypoint(function(direction) {
+    $('.js--wp-1').addClass('animated fadeIn');
+},{
+    offset:'50%'
+});
+
+$('.js--wp-2').waypoint(function(direction) {
+    $('.js--wp-2').addClass('animated fadeInUp');
+},{
+    offset:'50%'
+});
+
+$('.js--wp-3').waypoint(function(direction) {
+    $('.js--wp-3').addClass('animated fadeIn');
+},{
+    offset:'50%'
+});
+
+$('.js--wp-4').waypoint(function(direction) {
+    $('.js--wp-4').addClass('animated pulse');
+},{
+    offset:'50%'
+});
+
+
+
+/* MOBILE NAV */
+$('.burger').click(function(){
+    var nav = $('.main-nav');
+    var icon = $('.burger i');
+    
+    nav.slideToggle(200);
+    
+    if (icon.hasClass('ion-navicon-round')) {
+        icon.addClass('ion-close-round');
+        icon.removeClass('ion-navicon-round');
+    } else {
+        icon.addClass('ion-navicon-round');
+        icon.removeClass('ion-close-round');
+        
+    };
+    
 });
