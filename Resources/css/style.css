@@ -109,10 +109,19 @@ header {
     margin-top: 20px;
 }
 
+.logo-black {
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 .main-nav {
     float:right;
     list-style: none;
-    margin-top: 60px;
+    margin-top: 55px;
 }
 
 .main-nav li {
@@ -136,11 +145,38 @@ header {
     border-bottom: 2px solid #e67e22;
 }
 
+.sticky .main-nav {
+    margin-top: 18px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 100;
+}
+
+.sticky .logo {
+    display: none;
+}
+.sticky .logo-black {
+    display: block;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    color: #555;
+    padding: 16px 0;
+}
 /* features */
 
 .section-features .long-copy {
     margin-bottom: 30px;
 }
+
 
 
 /* Paragraph*/
